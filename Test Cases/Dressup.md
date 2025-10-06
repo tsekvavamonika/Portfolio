@@ -1,14 +1,5 @@
 # Test Case N1
-## ერთი და იგივე პროდუქტის - ბოლო ერთეულის შეძენა ორი ექაუნთიდან
-
-## Environment
-
-| Parameter           | Details                                                        |
-|---------------------|----------------------------------------------------------------|
-| Test Device         | Laptop, VivoBook_ASUSLaptop X509JB_X509JB                     |
-| Operating System    | Microsoft Windows 11 Pro Version 10.0.26100 Build 26100      |
-| Browser             | Google Chrome Version 133.0.6943.127 (Official Build) (64-bit) |
-| Reproducibility Rate | 100%                                                         |
+## ერთი და იგივე პროდუქტის - ბოლო ერთეულის შეძენა ორი ექაუნთიდან                                                   |
 
 ## Precondition
 - მომხმარებელი A და მომხმარებელი B ავტორიზებული არიან სისტემაში  
@@ -56,15 +47,6 @@
 # Test Case N2
 ## ჩანთაში პროდუქტის რაოდენობის შემცირება მინიმალურ არავალიდურ მნიშვნელობამდე (0)
 
-## Environment
-
-| Parameter           | Details                                                        |
-|---------------------|----------------------------------------------------------------|
-| Test Device         | Laptop, VivoBook_ASUSLaptop X509JB_X509JB                     |
-| Operating System    | Microsoft Windows 11 Pro Version 10.0.26100 Build 26100      |
-| Browser             | Google Chrome Version 133.0.6943.127 (Official Build) (64-bit) |
-| Reproducibility Rate | 100%                                                         |
-
 ## Precondition
 - მომხმარებელი ავტორიზებულია სისტემაში  
 - ჩანთაში არის პროდუქტი Samsonite - RESTACKD 81/30  
@@ -99,15 +81,6 @@
 
 # Test Case N3
 ## ვადაგასული პრომოკოდის შეყვანის შემოწმება
-
-## Environment
-
-| Parameter           | Details                                                        |
-|---------------------|----------------------------------------------------------------|
-| Test Device         | Laptop, VivoBook_ASUSLaptop X509JB_X509JB                     |
-| Operating System    | Microsoft Windows 11 Pro Version 10.0.26100 Build 26100      |
-| Browser             | Google Chrome Version 133.0.6943.127 (Official Build) (64-bit) |
-| Reproducibility Rate | 100%                                                         |
 
 ## Precondition
 - მომხმარებელი ავტორიზებულია სისტემაში  
@@ -147,15 +120,6 @@
 # Test Case N4
 ## კალათაში დამატებული პროდუქტის შენარჩუნების შემოწმება მომხმარებლის გამოსვლისა და ხელახლა შესვლის შემდეგ
 
-## Environment
-
-| Parameter           | Details                                                        |
-|---------------------|----------------------------------------------------------------|
-| Test Device         | Laptop, VivoBook_ASUSLaptop X509JB_X509JB                     |
-| Operating System    | Microsoft Windows 11 Pro Version 10.0.26100 Build 26100      |
-| Browser             | Google Chrome Version 133.0.6943.127 (Official Build) (64-bit) |
-| Reproducibility Rate | 100%                                                         |
-
 ## Precondition
 - მომხმარებელი ავტორიზებულია სისტემაში  
 
@@ -191,15 +155,7 @@
 
 # Test Case N5
 ## პროდუქტის ფილტრაცია არავალიდური დიაპაზონით (min > max)
-
-## Environment
-
-| Parameter           | Details                                                        |
-|---------------------|----------------------------------------------------------------|
-| Test Device         | Laptop, VivoBook_ASUSLaptop X509JB_X509JB                     |
-| Operating System    | Microsoft Windows 11 Pro Version 10.0.26100 Build 26100      |
-| Browser             | Google Chrome Version 133.0.6943.127 (Official Build) (64-bit) |
-| Reproducibility Rate | 100%                                                         |
+                                                       |
 
 ## Precondition
 - გახსნილია კატეგორია “კაცი”-ს კატალოგი  
@@ -228,15 +184,7 @@
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Test Case N6
 ## პაროლის აღდგენა – მეილზე ბმულის გაგზავნის პროცესი
-
-## Environment
-
-| Parameter           | Details                                                        |
-|---------------------|----------------------------------------------------------------|
-| Test Device         | Laptop, VivoBook_ASUSLaptop X509JB_X509JB                     |
-| Operating System    | Microsoft Windows 11 Pro Version 10.0.26100 Build 26100      |
-| Browser             | Google Chrome Version 133.0.6943.127 (Official Build) (64-bit) |
-| Reproducibility Rate | 100%                                                         |
+                                                     |
 
 ## Precondition
 - მომხმარებელი რეგისტრირებულია სისტემაში.  
