@@ -1,24 +1,41 @@
-**Title: პაროლის აღდგენა – მეილზე ბმულის გაგზავნის პროცესი**
+# პაროლის აღდგენა – მეილზე ბმულის გაგზავნის პროცესი
 
-**Environment:**
-**Test Device:** Laptop, VivoBook_ASUSLaptop X509JB_X509JB
-**Operating System:** Microsoft  Windows 11 Pro Version 10.0.26100 Build 26100
-**Browser:** Google Chrome Version 133.0.6943.127 (Official Build) (64-bit)
-**Reproducibility Rate:** 100%
-**Precondition:**
-მომხმარებელი რეგისტრირებულია სისტემაში
-მომხმარებელი არ არის ავტორიზებული სისტემაში
-**Test Data:**
-monika.tsekvava.1@btu.edu.ge
-**Steps to reproduce:**
-1. გახსენით ვებსაიტი https://dressup.ge/ka/
-2. დააჭირეთ ჰედერში ღილაკს **“ავტორიზაცია” **
-3. დააჭირეთ ღილაკს **“დაგავიწყდა პაროლი?”** პაროლის ინფუთის ქვევით
-4. შეიყვანეთ თქვენი რეგისტრირებული ელფოსტა (monika.tsekvava.1@btu.edu.ge)
-5. დააჭირეთ ღილაკს **“გადატვირთვის ბმულის გაგზავნა”**
-**Actual Result:**
-ბმული არ იგზავნება მეილზე, ჩნდება შეცდომის შეტყობინება  “An error occurred while sending the email.”
-**Expected Result:**
-ბმული გაიგზავნა და ჩნდება შეტყობინება “Password reset email has been sent successfully.” 
-**Attachment:**
-[Attachments Link](Jam | Console logs, network requests, and more (https://jam.dev/c/7450211f-f25d-4d6c-bc6b-ed3117f0ab11))
+## Environment
+
+| Parameter           | Details                                                        |
+|---------------------|----------------------------------------------------------------|
+| Test Device         | Laptop, VivoBook_ASUSLaptop X509JB_X509JB                     |
+| Operating System    | Microsoft Windows 11 Pro Version 10.0.26100 Build 26100      |
+| Browser             | Google Chrome Version 133.0.6943.127 (Official Build) (64-bit) |
+| Reproducibility Rate | 100%                                                         |
+
+## Precondition
+- მომხმარებელი რეგისტრირებულია სისტემაში  
+- მომხმარებელი არ არის ავტორიზებული სისტემაში  
+
+## Test Data
+
+| Email Address                  |
+|----------------------------------|
+| monika.tsekvava.1@btu.edu.ge   |
+
+## Steps to Reproduce
+
+| **N** | **Steps**                                                                                     | **Test Data**                     | **Expected Result** |
+|-------|------------------------------------------------------------------------------------------------|------------------------------------|----------------------|
+| 1     | გახსენით ვებსაიტი https://dressup.ge/ka/                                                     | -                                  | ვებსაიტი წარმატებით ჩაიტვირთება. |
+| 2     | დააჭირეთ ჰედერში ღილაკს **“ავტორიზაცია”**                                                     | -                                  | იხსნება ავტორიზაციის ფანჯარა:<ul><li>საიტის ლოგო</li><li>Facebook და Google-ით ავტორიზაციის ღილაკები</li><li>ელფოსტის და პაროლის ინფუთი</li><li>"დაგავიწყდა პაროლი?" ღილაკი</li><li>**"ავტორიზაციის"** და **"რეგისტრაციის"** ღილაკები</li></ul> |
+| 3     | დააჭირეთ ღილაკს **“დაგავიწყდა პაროლი?”** პაროლის ინფუთის ქვევით                               | -                                  | ხდება გადამისამართება პაროლის აღდგენის გვერდზე:<ul><li>მეილის შესაყვანი ინფუთი</li><li>ღილაკი **"გადატვირთვის ბმულის გაგზავნა"**</li><li>**"რეგისტრაციის"** ღილაკი</li></ul> |
+| 4     | შეიყვანეთ თქვენი რეგისტრირებული ელფოსტა                                                       | monika.tsekvava.1@btu.edu.ge     | ელფოსტის ინფუთი იღებს შეყვანილ მნიშვნელობას. |
+| 5     | დააჭირეთ ღილაკს **"გადატვირთვის ბმულის გაგზავნა"**                                           | -                                  | <ul><li>ბმული არ იგზავნება მეილზე</li><li>ჩნდება შეცდომის შეტყობინება: **"An error occurred while sending the email."**</li></ul> |
+
+## Actual Result
+ბმული არ იგზავნება მეილზე, ჩნდება შეცდომის შეტყობინება:  
+> “An error occurred while sending the email.”
+
+## Expected Result
+ბმული გაიგზავნა და ჩნდება შეტყობინება:  
+> “Password reset email has been sent successfully.”
+
+## Attachment
+[Attachments Link](https://jam.dev/c/7450211f-f25d-4d6c-bc6b-ed3117f0ab11)
