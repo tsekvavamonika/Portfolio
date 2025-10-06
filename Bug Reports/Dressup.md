@@ -21,4 +21,4 @@ monika.tsekvava.1@btu.edu.ge
 **Expected Result:**
 ბმული გაიგზავნა და ჩნდება შეტყობინება “Password reset email has been sent successfully.” 
 **Attachment:**
-[Attachments Link]([Jam | Console logs, network requests, and more ](https://jam.dev/c/7450211f-f25d-4d6c-bc6b-ed3117f0ab11))
+[Attachments Link](Jam | Console logs, network requests, and more (https://jam.dev/c/7450211f-f25d-4d6c-bc6b-ed3117f0ab11))
