@@ -4,7 +4,7 @@
 
 Manual QA with hands - on experience on live web projects
 
-**Projects & Experience**
+## Projects & Experience
 Due to confidentiality agreements, specific project names cannot be disclosed.
 However, my portfolio includes real QA deliverables from several live client
 projects,
