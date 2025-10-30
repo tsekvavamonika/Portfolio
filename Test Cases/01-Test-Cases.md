@@ -18,8 +18,8 @@
 
 | Parameter                     | Details                                             |
 |--------------------------------|------------------------------------------------------|
-| **მომხმარებელი A - Account**      | monika.tsekvava.1@btu.edu.ge, Test123!             |
-| **მომხმარებელი B - Account**      | testUser@gmail.com, Test123!                        |
+| **მომხმარებელი A - Account**      | testUser1@gmail.com, Test123!             |
+| **მომხმარებელი B - Account**      | testUser2@gmail.com, Test123!                        |
 | **მომხმარებელი A - ბარათის მონაცემები** | ბარათის ნომერი: 4111 1111 1111 1111<br>ვადა: 12/26<br>CVV: 123 |
 
 ## Steps to Reproduce
@@ -178,7 +178,7 @@
 - მომხმარებელი ხედავს შესაბამის წარმატების შეტყობინებას.  
 
 ## Single parameters  
-**მომხმარებლის email:** monika.tsekvava.1@btu.edu.ge  
+**მომხმარებლის email:** testUser@gmail.com
 
 ## Steps to Reproduce
 
