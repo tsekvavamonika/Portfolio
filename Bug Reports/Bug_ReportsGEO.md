@@ -155,3 +155,238 @@ Example
 
 ## Attachment
 Example
+
+# Bug Report N5
+
+## Authentication: სისტემიდან გამოსვლისა და გვერდის რეფრეშის შემდეგ მომხმარებელი კვლავ ავტორიზებულია
+
+## Environment
+
+| Parameter | Details |
+|---|---|
+| Test Device | Laptop, VivoBook_ASUSLaptop X509JB_X509JB |
+| Operating System | Microsoft Windows 11 Pro Version 10.0.26100 Build 26100 |
+| Browser | Google Chrome Version 133.0.6943.127 (Official Build) (64-bit) |
+| Reproducibility Rate | 100% |
+
+## Precondition
+- მომხმარებელი ავტორიზებულია სისტემაში
+- მომხმარებლის ანგარიშზე შენახულია პროდუქტები კალათაში
+
+## Steps to Reproduce
+
+| **N** | **Steps** | **Test Data** |
+|---|---|---|
+| 1 | გახსენით ვებსაიტი https://......ge/ka/ | - |
+| 2 | შედით სისტემაში ვალიდური ანგარიშით | testUser@gmail.com |
+| 3 | დააჭირეთ პროფილის აიქონს | - |
+| 4 | დააჭირეთ ღილაკს **“Logout”** | - |
+| 5 | განაახლეთ გვერდი | - |
+| 6 | სცადეთ პროფილის გვერდზე პირდაპირი გადასვლა | - |
+
+## Actual Result
+- გვერდის განახლების შემდეგ მომხმარებელი ნაწილობრივ კვლავ ავტორიზებულია.
+- პროფილის გვერდი ხელმისაწვდომია ხელახლა ავტორიზაციის გარეშე.
+
+## Expected Result
+- Logout-ის შემდეგ სესია სრულად უნდა გაუქმდეს.
+- დაცული გვერდები აღარ უნდა იყოს ხელმისაწვდომი.
+
+## Attachment
+Example
+
+# Bug Report N6
+
+## Payment: წარმატებული გადახდის შემდეგ შეკვეთის სტატუსი რჩება “Pending”
+
+## Environment
+
+| Parameter | Details |
+|---|---|
+| Test Device | Laptop, VivoBook_ASUSLaptop X509JB_X509JB |
+| Operating System | Microsoft Windows 11 Pro Version 10.0.26100 Build 26100 |
+| Browser | Google Chrome Version 133.0.6943.127 (Official Build) (64-bit) |
+| Reproducibility Rate | 100% |
+
+## Precondition
+- მომხმარებლის კალათაში დამატებულია პროდუქტები
+
+## Steps to Reproduce
+
+| **N** | **Steps** | **Test Data** |
+|---|---|---|
+| 1 | გადადით Checkout გვერდზე | - |
+| 2 | შეასრულეთ გადახდა ვალიდური ბარათით | Test Visa Card |
+| 3 | გახსენით შეკვეთების ისტორია | - |
+
+## Actual Result
+- გადახდა წარმატებით სრულდება, თუმცა შეკვეთის სტატუსი რჩება **“Pending”**.
+
+## Expected Result
+- წარმატებული გადახდის შემდეგ შეკვეთის სტატუსი უნდა შეიცვალოს **“Paid”** ან **“Confirmed”** მნიშვნელობით.
+
+## Attachment
+Example
+
+# Bug Report N7
+
+## Cart: “Add to Cart” ღილაკზე ორმაგი დაკლიკების შემდეგ პროდუქტი დუბლირდება
+
+## Environment
+
+| Parameter | Details |
+|---|---|
+| Test Device | Laptop, VivoBook_ASUSLaptop X509JB_X509JB |
+| Operating System | Microsoft Windows 11 Pro Version 10.0.26100 Build 26100 |
+| Browser | Google Chrome Version 133.0.6943.127 (Official Build) (64-bit) |
+| Reproducibility Rate | 100% |
+
+## Steps to Reproduce
+
+| **N** | **Steps** | **Test Data** |
+|---|---|---|
+| 1 | გახსენით პროდუქტის დეტალური გვერდი | - |
+| 2 | სწრაფად ორჯერ დააჭირეთ ღილაკს **“Add to Cart”** | - |
+| 3 | გახსენით კალათა | - |
+
+## Actual Result
+- კალათაში ემატება დუბლირებული პროდუქტები.
+
+## Expected Result
+- რამდენჯერმე სწრაფი დაკლიკების მიუხედავად, პროდუქტი კალათაში მხოლოდ ერთხელ უნდა დაემატოს.
+
+## Attachment
+Example
+
+# Bug Report N8
+
+## Authorization: არაავტორიზებულ მომხმარებელს შეუძლია Checkout გვერდზე გადასვლა
+
+## Environment
+
+| Parameter | Details |
+|---|---|
+| Test Device | Laptop, VivoBook_ASUSLaptop X509JB_X509JB |
+| Operating System | Microsoft Windows 11 Pro Version 10.0.26100 Build 26100 |
+| Browser | Google Chrome Version 133.0.6943.127 (Official Build) (64-bit) |
+| Reproducibility Rate | 100% |
+
+## Steps to Reproduce
+
+| **N** | **Steps** | **Test Data** |
+|---|---|---|
+| 1 | გამოდით სისტემიდან | - |
+| 2 | ბრაუზერში ჩასვით Checkout გვერდის პირდაპირი URL | /checkout |
+| 3 | დააჭირეთ Enter | - |
+
+## Actual Result
+- არაავტორიზებულ მომხმარებელს შეუძლია Checkout გვერდზე წვდომა.
+
+## Expected Result
+- არაავტორიზებული მომხმარებელი უნდა გადამისამართდეს ავტორიზაციის გვერდზე.
+
+## Attachment
+Example
+
+# Bug Report N9
+
+## Product Page: მარაგში არარსებული პროდუქტის შეძენა კვლავ შესაძლებელია
+
+## Environment
+
+| Parameter | Details |
+|---|---|
+| Test Device | Laptop, VivoBook_ASUSLaptop X509JB_X509JB |
+| Operating System | Microsoft Windows 11 Pro Version 10.0.26100 Build 26100 |
+| Browser | Google Chrome Version 133.0.6943.127 (Official Build) (64-bit) |
+| Reproducibility Rate | 100% |
+
+## Precondition
+- პროდუქტის მარაგის რაოდენობა არის 0
+
+## Steps to Reproduce
+
+| **N** | **Steps** | **Test Data** |
+|---|---|---|
+| 1 | გახსენით პროდუქტის გვერდი, რომელიც არ არის მარაგში | - |
+| 2 | დააჭირეთ ღილაკს **“Add to Cart”** | - |
+| 3 | გადადით Checkout გვერდზე | - |
+
+## Actual Result
+- მარაგში არარსებული პროდუქტი წარმატებით ემატება კალათაში და შესაძლებელია მისი შეძენა.
+
+## Expected Result
+- მარაგში არარსებული პროდუქტის შეძენა შეუძლებელი უნდა იყოს.
+
+## Attachment
+Example
+
+# Bug Report N10
+
+## Checkout: გვერდის განახლების შემდეგ შეკვეთის ჯამური თანხა იცვლება
+
+## Environment
+
+| Parameter | Details |
+|---|---|
+| Test Device | Laptop, VivoBook_ASUSLaptop X509JB_X509JB |
+| Operating System | Microsoft Windows 11 Pro Version 10.0.26100 Build 26100 |
+| Browser | Google Chrome Version 133.0.6943.127 (Official Build) (64-bit) |
+| Reproducibility Rate | 100% |
+
+## Precondition
+- მომხმარებელი ავტორიზებულია
+- კალათაში დამატებულია რამდენიმე პროდუქტი
+
+## Steps to Reproduce
+
+| **N** | **Steps** | **Test Data** |
+|---|---|---|
+| 1 | გახსენით ვებსაიტი https://......ge/ka/ | - |
+| 2 | დაამატეთ რამდენიმე პროდუქტი კალათაში | - |
+| 3 | გადადით Checkout გვერდზე | - |
+| 4 | დააკვირდით შეკვეთის ჯამურ თანხას | - |
+| 5 | განაახლეთ Checkout გვერდი | - |
+
+## Actual Result
+- გვერდის განახლების შემდეგ შეკვეთის ჯამური თანხა იცვლება.
+- ფასდაკლების გამოთვლა ხდება არასწორად.
+
+## Expected Result
+- გვერდის განახლების შემდეგ შეკვეთის ჯამური თანხა და ფასდაკლება უცვლელი უნდა დარჩეს.
+
+## Attachment
+Example
+
+# Bug Report N11
+
+## Session Timeout: სესიის ვადის გასვლის შემდეგ მომხმარებელს კვლავ შეუძლია მოქმედებების შესრულება
+
+## Environment
+
+| Parameter | Details |
+|---|---|
+| Test Device | Laptop, VivoBook_ASUSLaptop X509JB_X509JB |
+| Operating System | Microsoft Windows 11 Pro Version 10.0.26100 Build 26100 |
+| Browser | Google Chrome Version 133.0.6943.127 (Official Build) (64-bit) |
+| Reproducibility Rate | 100% |
+
+## Precondition
+- მომხმარებელი ავტორიზებულია
+
+## Steps to Reproduce
+
+| **N** | **Steps** | **Test Data** |
+|---|---|---|
+| 1 | შედით სისტემაში | testUser@gmail.com |
+| 2 | არ შეასრულოთ მოქმედებები სესიის ვადის გასვლამდე | - |
+| 3 | სცადეთ პროდუქტის კალათაში დამატება | - |
+
+## Actual Result
+- სესიის ვადის გასვლის შემდეგ მომხმარებელს კვლავ შეუძლია მოქმედებების შესრულება.
+
+## Expected Result
+- სესიის ვადის გასვლის შემდეგ მომხმარებელი უნდა გადამისამართდეს ავტორიზაციის გვერდზე.
+
+## Attachment
+Example
