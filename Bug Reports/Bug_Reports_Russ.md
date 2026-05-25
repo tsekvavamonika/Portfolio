@@ -1,4 +1,4 @@
-# Отчет об ошибке N1
+# Bug Report N1
 
 ## Восстановление пароля – Процесс отправки ссылки на электронную почту
 
@@ -44,7 +44,7 @@
 ## Attachment
 Example
 
-# Отчет об ошибке N2
+# Bug Report N2
 
 ## Logout & Re-login: Некорректная работа корзины и списка желаемого после выхода со страницы Checkout и повторного входа
 
@@ -91,7 +91,7 @@ Example
 ## Attachment
 Example
 
-# Отчет об ошибке N3
+# Bug Report N3
 
 ## Dropdown: На странице «Вакансии» категория «Horeca» дублируется в выпадающем списке категорий и после обновления страницы заменяется другой категорией
 
@@ -123,7 +123,7 @@ Example
 ## Attachment
 Example
 
-# Отчет об ошибке N4
+# Bug Report N4
 
 ## Filters: Иконки цветов не соответствуют своим названиям в фильтре цветов
 
@@ -153,6 +153,241 @@ Example
 
 ## Expected Result
 - Для каждого названия цвета в фильтре должна отображаться соответствующая цветовая иконка.
+
+## Attachment
+Example
+
+# Bug Report N5
+
+## Authentication: Пользователь остается авторизованным после выхода из системы и обновления страницы
+
+## Environment
+
+| Parameter | Details |
+|---|---|
+| Test Device | Laptop, VivoBook_ASUSLaptop X509JB_X509JB |
+| Operating System | Microsoft Windows 11 Pro Version 10.0.26100 Build 26100 |
+| Browser | Google Chrome Version 133.0.6943.127 (Official Build) (64-bit) |
+| Reproducibility Rate | 100% |
+
+## Precondition
+- Пользователь авторизован в системе
+- В аккаунте пользователя есть сохраненные товары в корзине
+
+## Steps to Reproduce
+
+| **N** | **Steps** | **Test Data** |
+|---|---|---|
+| 1 | Откройте веб-сайт https://......ge/ka/ | - |
+| 2 | Войдите в систему с помощью валидной учетной записи | testUser@gmail.com |
+| 3 | Нажмите на иконку профиля | - |
+| 4 | Нажмите кнопку **«Logout»** | - |
+| 5 | Обновите страницу | - |
+| 6 | Попробуйте открыть страницу профиля напрямую | - |
+
+## Actual Result
+- После обновления страницы пользователь остается частично авторизованным.
+- Страница профиля остается доступной без повторного входа.
+
+## Expected Result
+- После выхода из системы сессия должна полностью завершаться.
+- Защищенные страницы не должны быть доступны после logout.
+
+## Attachment
+Example
+
+# Bug Report N6
+
+## Payment: После успешной оплаты статус заказа остается “Pending”
+
+## Environment
+
+| Parameter | Details |
+|---|---|
+| Test Device | Laptop, VivoBook_ASUSLaptop X509JB_X509JB |
+| Operating System | Microsoft Windows 11 Pro Version 10.0.26100 Build 26100 |
+| Browser | Google Chrome Version 133.0.6943.127 (Official Build) (64-bit) |
+| Reproducibility Rate | 100% |
+
+## Precondition
+- В корзине пользователя есть товары
+
+## Steps to Reproduce
+
+| **N** | **Steps** | **Test Data** |
+|---|---|---|
+| 1 | Перейдите к оформлению заказа | - |
+| 2 | Выполните оплату с помощью валидной банковской карты | Test Visa Card |
+| 3 | Откройте историю заказов | - |
+
+## Actual Result
+- Оплата проходит успешно, но статус заказа остается **“Pending”**.
+
+## Expected Result
+- После успешной оплаты статус заказа должен измениться на **“Paid”** или **“Confirmed”**.
+
+## Attachment
+Example
+
+# Bug Report N7
+
+## Cart: Дублирование товаров после двойного нажатия кнопки “Add to Cart”
+
+## Environment
+
+| Parameter | Details |
+|---|---|
+| Test Device | Laptop, VivoBook_ASUSLaptop X509JB_X509JB |
+| Operating System | Microsoft Windows 11 Pro Version 10.0.26100 Build 26100 |
+| Browser | Google Chrome Version 133.0.6943.127 (Official Build) (64-bit) |
+| Reproducibility Rate | 100% |
+
+## Steps to Reproduce
+
+| **N** | **Steps** | **Test Data** |
+|---|---|---|
+| 1 | Откройте страницу товара | - |
+| 2 | Быстро дважды нажмите кнопку **“Add to Cart”** | - |
+| 3 | Откройте корзину | - |
+
+## Actual Result
+- В корзину добавляются дублирующиеся товары.
+
+## Expected Result
+- Независимо от количества быстрых нажатий товар должен добавляться только один раз.
+
+## Attachment
+Example
+
+# Bug Report N8
+
+## Authorization: Неавторизованный пользователь может открыть страницу Checkout
+
+## Environment
+
+| Parameter | Details |
+|---|---|
+| Test Device | Laptop, VivoBook_ASUSLaptop X509JB_X509JB |
+| Operating System | Microsoft Windows 11 Pro Version 10.0.26100 Build 26100 |
+| Browser | Google Chrome Version 133.0.6943.127 (Official Build) (64-bit) |
+| Reproducibility Rate | 100% |
+
+## Steps to Reproduce
+
+| **N** | **Steps** | **Test Data** |
+|---|---|---|
+| 1 | Выйдите из системы | - |
+| 2 | Вставьте прямую ссылку checkout в браузер | /checkout |
+| 3 | Нажмите Enter | - |
+
+## Actual Result
+- Неавторизованный пользователь может получить доступ к странице checkout.
+
+## Expected Result
+- Неавторизованный пользователь должен быть перенаправлен на страницу логина.
+
+## Attachment
+Example
+
+# Bug Report N9
+
+## Product Page: Товар с нулевым остатком все еще доступен для покупки
+
+## Environment
+
+| Parameter | Details |
+|---|---|
+| Test Device | Laptop, VivoBook_ASUSLaptop X509JB_X509JB |
+| Operating System | Microsoft Windows 11 Pro Version 10.0.26100 Build 26100 |
+| Browser | Google Chrome Version 133.0.6943.127 (Official Build) (64-bit) |
+| Reproducibility Rate | 100% |
+
+## Precondition
+- Количество товара на складе равно 0
+
+## Steps to Reproduce
+
+| **N** | **Steps** | **Test Data** |
+|---|---|---|
+| 1 | Откройте страницу товара с нулевым остатком | - |
+| 2 | Нажмите кнопку **“Add to Cart”** | - |
+| 3 | Перейдите к оформлению заказа | - |
+
+## Actual Result
+- Товар с нулевым остатком успешно добавляется в корзину и доступен для покупки.
+
+## Expected Result
+- Товары с нулевым остатком не должны быть доступны для покупки.
+
+## Attachment
+Example
+
+# Bug Report N10
+
+## Checkout: Общая сумма заказа изменяется после обновления страницы
+
+## Environment
+
+| Parameter | Details |
+|---|---|
+| Test Device | Laptop, VivoBook_ASUSLaptop X509JB_X509JB |
+| Operating System | Microsoft Windows 11 Pro Version 10.0.26100 Build 26100 |
+| Browser | Google Chrome Version 133.0.6943.127 (Official Build) (64-bit) |
+| Reproducibility Rate | 100% |
+
+## Precondition
+- Пользователь авторизован
+- В корзине находится несколько товаров
+
+## Steps to Reproduce
+
+| **N** | **Steps** | **Test Data** |
+|---|---|---|
+| 1 | Откройте веб-сайт https://......ge/ka/ | - |
+| 2 | Добавьте несколько товаров в корзину | - |
+| 3 | Перейдите к оформлению заказа | - |
+| 4 | Обратите внимание на общую сумму заказа | - |
+| 5 | Обновите страницу checkout | - |
+
+## Actual Result
+- После обновления страницы общая сумма заказа изменяется.
+- Расчет скидки становится некорректным.
+
+## Expected Result
+- Общая сумма заказа и скидка должны оставаться неизменными после обновления страницы.
+
+## Attachment
+Example
+
+# Bug Report N11
+
+## Session Timeout: Пользователь может выполнять действия после истечения сессии
+
+## Environment
+
+| Parameter | Details |
+|---|---|
+| Test Device | Laptop, VivoBook_ASUSLaptop X509JB_X509JB |
+| Operating System | Microsoft Windows 11 Pro Version 10.0.26100 Build 26100 |
+| Browser | Google Chrome Version 133.0.6943.127 (Official Build) (64-bit) |
+| Reproducibility Rate | 100% |
+
+## Precondition
+- Пользователь авторизован
+
+## Steps to Reproduce
+
+| **N** | **Steps** | **Test Data** |
+|---|---|---|
+| 1 | Войдите в систему | testUser@gmail.com |
+| 2 | Не выполняйте никаких действий до истечения времени сессии | - |
+| 3 | Попробуйте добавить товар в корзину | - |
+
+## Actual Result
+- Пользователь все еще может выполнять действия после истечения сессии.
+
+## Expected Result
+- После истечения сессии пользователь должен быть перенаправлен на страницу логина.
 
 ## Attachment
 Example
